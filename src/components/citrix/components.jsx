@@ -5,13 +5,13 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 
 export const ResourceAnalysisCard = ({ resourceAnalysis, sites, maxSessions, loadFactor, sessionCPU, serverPhysicalCPU }) => (
   <Card className="p-4">
-    <CardTitle className="text-lg mb-4">Resource Analysis Summary</CardTitle>
+    <CardTitle className="text-lg mb-4 text-gray-900">Resource Analysis Summary</CardTitle>
     <div className="space-y-4">
-      <Alert>
+      <Alert className="bg-white">
         <AlertDescription>
-          <div className="space-y-2">
+          <div className="space-y-2 text-gray-900">
             <div className="flex items-center space-x-2 mb-2">
-              <p className="font-medium text-lg">Normal Operations Analysis</p>
+              <p className="font-medium text-lg text-gray-900">Normal Operations Analysis</p>
               <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center">
                 <span className="text-blue-800 font-bold">i</span>
               </div>
