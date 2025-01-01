@@ -268,7 +268,6 @@ const CitrixCalculator = () => {
                           type="number"
                           value={sessionCPU.physical}
                           disabled
-                          className="bg-gray-50 text-gray-900 dark:text-gray-900 disabled:text-gray-900"
                         />
                       </div>
                       <div>
@@ -347,7 +346,6 @@ const CitrixCalculator = () => {
                             type="number"
                             value={site.physicalServers}
                             onChange={(e) => updateSite(index, 'physicalServers', parseInt(e.target.value))}
-                            className="bg-white text-gray-900 dark:text-gray-900"
                           />
                         </div>
                         <div>
@@ -357,7 +355,6 @@ const CitrixCalculator = () => {
                               type="number"
                               value={site.physicalCPU}
                               disabled
-                              className="bg-gray-50 text-gray-900 dark:text-gray-900 disabled:text-gray-900 disabled:opacity-75"
                             />
                             <div className="text-sm text-gray-600">
                               Supported Sessions: {Math.floor(site.physicalCPU / sessionCPU.physical).toLocaleString()}
