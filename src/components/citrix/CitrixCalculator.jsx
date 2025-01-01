@@ -14,7 +14,7 @@ const CitrixCalculator = () => {
   // New server configuration states
   const [serverConfig, setServerConfig] = useState({
     serverPhysicalCPU: 64,     // Physical CPU per server
-    vmsPerServer: 16,          // VMs per server
+    vmsPerServer: 10,          // VMs per server
     vcpuPerVM: 8,             // Virtual CPU per VM
     maxSessionsPerVM: 2,      // Max sessions per VM
   });
@@ -268,6 +268,7 @@ const CitrixCalculator = () => {
                           type="number"
                           value={sessionCPU.physical}
                           disabled
+                          className="bg-gray-50 text-gray-900 dark:text-gray-900 disabled:text-gray-900"
                         />
                       </div>
                       <div>
@@ -346,6 +347,7 @@ const CitrixCalculator = () => {
                             type="number"
                             value={site.physicalServers}
                             onChange={(e) => updateSite(index, 'physicalServers', parseInt(e.target.value))}
+                            className="bg-white text-gray-900 dark:text-gray-900"
                           />
                         </div>
                         <div>
@@ -355,6 +357,7 @@ const CitrixCalculator = () => {
                               type="number"
                               value={site.physicalCPU}
                               disabled
+                              className="bg-gray-50 text-gray-900 dark:text-gray-900 disabled:text-gray-900 disabled:opacity-75"
                             />
                             <div className="text-sm text-gray-600">
                               Supported Sessions: {Math.floor(site.physicalCPU / sessionCPU.physical).toLocaleString()}
