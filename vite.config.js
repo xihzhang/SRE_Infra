@@ -6,7 +6,7 @@ import path from 'path'
 const cacheDir = process.env.VITE_CACHE_DIR || path.resolve('/tmp/vite')
 
 export default defineConfig({
-  base: '/citrix-calc/', 
+  base: '/SRE_Infra/', 
   plugins: [react()],
   server: {
     host: true,
